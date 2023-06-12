@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> SYSCAD </title>
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" class="nav-toggle" style="cursor:pointer"></input>
+        <div class="header">
+            <span class="syscad-mobile"><h1>SYSCAD</h1></span>
+            <div class="header-bar">
+                <p class="menu-icon"style="font-size:25px;cursor:pointer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </p>
+                <span class="header-span"> <img src="img1.jpeg" alt="profile photo"><p>Fulano Júnior</p></span>
+            </div>
+        </div>
+        <div class="sidenav" id="testSideNav">
+            <h1> SYSCAD </h1>
+            <div class="profile">
+                <span class="identify"><img src="img1.jpeg" alt="profile photo">Fulana Júnior</span>
+                <span class="online"><span class="circle"></span> Online </span>
+            </div>
+            <span class="menu"><p>MENU</p><span class="span-menu"><img src="multiple-users.png">Usuários</span></span>
+        </div>
+        <div class="content">
+            <div class="top">
+                <div class="usuarios">
+                    <h2> Usuários </h2>
+                    <h5> Gerenciamento de usuários do sistema </h5>
+                </div>
+                <span class="caminho"><img src="casa.png" alt="home"> Home<p>&#10148; usuários</p></span>
+            </div>
+            <div class="ladoesquerdo">
+                
+                <div class="table-users">
+                    <table>
+                        <caption>Lista de Usuários</caption>
+                        <thead>
+                        <tr class="table-thead">
+                            <th>Foto</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Admin</th>
+                            <th>Criado em</th>
+                            <th>Ações</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Foto"><img src="img1.jpeg" alt="user photo"></td>
+                            <td data-label="Nome">Fulano</td>
+                            <td data-label="Email">fulano@syscad.com.br</td>
+                            <td data-label="Admin">Sim</td>
+                            <td data-label="Criado em">02/04/2018</td>
+                            <td data-label="Ações"><input type="button" value="Editar" />
+                                <input type="button" value="Excluir" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Foto"><img src="img1.jpeg" alt="user photo"> </td>
+                            <td data-label="Nome">Fulano</td>
+                            <td data-label="Email">fulano@syscad.com.br</td>
+                            <td data-label="Admin">Sim</td>
+                            <td data-label="Criado em">02/04/2018</td>
+                            <td data-label="Ações"><input type="button" value="Editar" />
+                                <input type="button" value="Excluir" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Foto"><img src="img1.jpeg" alt="user photo"> </td>
+                            <td data-label="Nome">Fulano</td>
+                            <td data-label="Email">fulano@syscad.com.br</td>
+                            <td data-label="Admin">Sim</td>
+                            <td data-label="Criado em">02/04/2018</td>
+                            <td data-label="Ações"><input type="button" value="Editar" />
+                                <input type="button" value="Excluir" />
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="ladodireito">
+                <div class="cards-space">
+                    <div class="cards" id="card1">
+                        <h1>44</h1>
+                        <h3>Novos Usuários</h3>
+                        <img src="pie.png" alt="">
+                    </div>
+                    <div class="cards" id="card2">
+                        <h1>15</h1>
+                        <h3>Administradores</h3>
+                        <img src="contact.png" alt="">
+                    </div>
+                </div>
+                <form method="post" action="/">
+                    <h3>Novo Usuário</h3>
+                    <fieldset>
+                        <label for="nome">Nome: <input id="nome" name="nome" type="text" placeholder="Insira o nome de usuário" required /></label>
+                        <label for="genero-masc">Gênero: </label>
+                        <input class="select-gender" id="genero-masc" name="genero" type="radio"> Masculino<br>
+                        <input class="select-gender" id="genero-fem" name="genero" type="radio"> Feminino<br><br>
+                        <label for="datanasc">Nascimento: <input id="datanasc" name="datanasc" type="date"
+                                required /></label>
+                        <label for="pais"> País<br>
+                            <select id="pais" name="pais">
+                                <option value="">Selecione um país</option>
+                                <option value="1">Argentina</option>
+                                <option value="2">Bolívia</option>
+                                <option value="3">Brasil</option>
+                                <option value="4">Chile</option>
+                                <option value="5">Colômbia</option>
+                                <option value="6">Equador</option>
+                                <option value="7">Guiana</option>
+                                <option value="8">França (Guiana Francesa)</option>
+                                <option value="9">Paraguai</option>
+                                <option value="10">Peru</option>
+                                <option value="11">Suriname</option>
+                                <option value="12">Uruguai</option>
+                                <option value="13">Venezuela</option>
+                            </select>
+                        </label>
+                        <label for="email">Email <br><input id="email" type="text" placeholder="Digite o e-mail" required></label>
+                        <label for="senha">Senha<br><input id="senha" type="password" placeholder="Crie uma senha" required></label>
+                        <label for="foto">Foto<br><input id="foto" type="file"></label>
+                        <input id="admin" type="checkbox">Administrador<br><br>
+                        <input type="button" class="form-salvar" type="submit" value="Salvar">
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+        <div class="footer">
+            <p>Projeto desenvolvido por alunos do Curso Técnico em Informática da EEEP José de Barcelos </p>
+            <p>SYSCAD</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
